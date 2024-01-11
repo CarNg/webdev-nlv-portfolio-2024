@@ -1,3 +1,5 @@
+import process from "process";
+
 export async function fetchGraphQL(query, tag, preview = false) {
   return fetch(
     `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
@@ -19,4 +21,19 @@ export async function fetchGraphQL(query, tag, preview = false) {
       next: { tags: [tag] },
     }
   ).then((response) => response.json());
+}
+
+export function extractMetadata(metadata) {
+  return {
+    title: metadata.seoFields.pageTitle,
+    description: metadata.seoFields.pageDescription,
+    alternates: {
+      canonical: metadata.seoFields.canonicalUrl,
+    },
+    openGraph: {
+      title: metadata.seoFields.pageTitle,
+      description: metadata.seoFields.pageDescription,
+      images: [...metadata.seoFields.shareImagesCollection.items],
+    },
+  };
 }

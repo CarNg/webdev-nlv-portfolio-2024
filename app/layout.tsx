@@ -1,13 +1,7 @@
-import type { Metadata } from "next";
-import { Sono } from "next/font/google";
+import { Sometype_Mono } from "next/font/google";
 import "./globals.css";
 
-const sono = Sono({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "Night Light Visuals | Front-end Developer & Game Designer",
-  description: "Front-end developer and game designer based in Hong Kong.",
-};
+const sometype = Sometype_Mono({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -16,7 +10,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={sono.className}>{children}</body>
+      <body className={sometype.className}>{children}</body>
     </html>
   );
 }
