@@ -30,7 +30,7 @@ function printText(words) {
         x = -1;
         letterCount += x;
         waiting = false;
-      }, 1500);
+      }, 1000);
     } else if (waiting === false) {
       if (target) target.innerHTML = words[0].substring(0, letterCount);
       letterCount += x;
