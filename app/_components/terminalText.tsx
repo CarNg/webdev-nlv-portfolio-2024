@@ -9,6 +9,10 @@ function printText(words) {
   let x = 1;
   let waiting = false;
   let target = document.getElementById("text");
+
+  if (con) con.classList.remove("opacity-0");
+  visible = true;
+
   window.setInterval(function () {
     if (letterCount === 0 && waiting === false) {
       waiting = true;
@@ -45,14 +49,16 @@ function printText(words) {
 
 export default function TerminalText({ text }) {
   useEffect(() => {
-    printText([text, "stay tuned"]);
+    setTimeout(() => {
+      printText([text, "stay tuned"]);
+    }, 1300);
   });
 
   return (
     <div className="console-container z-10 h-10 flex justify-center min-w-full">
       <h1 className="text-sm md:text-3xl text-white" id="text"></h1>
       <div
-        className=" inline-block relative left-1 text-sm md:text-3xl text-white"
+        className=" inline-block relative left-1 text-sm md:text-3xl text-white opacity-0"
         id="console-underscore"
       >
         &#95;

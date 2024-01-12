@@ -19,7 +19,10 @@ export default async function Home() {
   return (
     <main>
       <ParticlesBackground />
-      <div className="flex min-h-screen flex-col items-center justify-center gap-2 md:gap-4 bg-black">
+      <div
+        id="landing-page-content-wrapper"
+        className="flex min-h-screen flex-col items-center justify-center gap-2 md:gap-4 md:pb-9 bg-black"
+      >
         <div
           className="relative max-w-4xl z-10 w-4/5"
           style={{ aspectRatio: "80/51" }}
