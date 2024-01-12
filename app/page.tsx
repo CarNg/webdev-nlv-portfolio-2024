@@ -6,6 +6,7 @@ import {
 import type { Metadata } from "next";
 import Image from "next/image";
 import ParticlesBackground from "./_components/particlesBackground";
+import TerminalText from "./_components/terminalText";
 
 export async function generateMetadata(): Promise<Metadata> {
   const metadata = await getLangingMetadata();
@@ -18,7 +19,7 @@ export default async function Home() {
   return (
     <main>
       <ParticlesBackground />
-      <div className="flex min-h-screen flex-col items-center align-middle justify-center gap-6 bg-black">
+      <div className="flex min-h-screen flex-col items-center align-middle justify-center gap-5 bg-black pb-4">
         <Image
           priority
           className="z-10"
@@ -27,7 +28,7 @@ export default async function Home() {
           width="800"
           height="510"
         />
-        <h1 className="z-10 text-3xl text-white">{data.subtitle}</h1>
+        <TerminalText text={data.subtitle} />
       </div>
     </main>
   );
