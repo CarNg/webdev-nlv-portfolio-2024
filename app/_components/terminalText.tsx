@@ -50,9 +50,9 @@ export default function TerminalText({ text }) {
 
   return (
     <div className="console-container z-10 h-10 flex justify-center min-w-full">
-      <h1 className="text-3xl text-white" id="text"></h1>
+      <h1 className="text-sm md:text-3xl text-white" id="text"></h1>
       <div
-        className=" inline-block relative left-1 text-3xl text-white"
+        className=" inline-block relative left-1 text-sm md:text-3xl text-white"
         id="console-underscore"
       >
         &#95;
