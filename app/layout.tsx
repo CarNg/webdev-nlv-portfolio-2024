@@ -1,7 +1,10 @@
 import { Sometype_Mono } from "next/font/google";
 import "./globals.css";
 
-const sometype = Sometype_Mono({ subsets: ["latin"] });
+const sometype = Sometype_Mono({
+  subsets: ["latin"],
+  variable: "--custom-font-sometype",
+});
 
 export default function RootLayout({
   children,
