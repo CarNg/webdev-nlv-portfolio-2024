@@ -19,20 +19,22 @@ export default async function About() {
     <main>
       <ParticlesBackground />
       <Navbar hide="about" />
-      <div className="fade-in-anin flex min-h-screen flex-row items-center justify-center gap-12 md:pb-9 bg-black">
-        <Image
-          className="z-10 border-dark-teal border-solid border-2 rounded-full"
-          src={data.avatar.url}
-          alt={data.avatar.title}
-          height="200"
-          width="200"
-        />
+      <div className="fade-in-anin content-wrapper flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
+        <div className="z-10 min-w-[180px] md:min-w-[200px] max-w-[180px] md:max-w-[200px]">
+          <Image
+            className="border-dark-teal border-solid border-2 rounded-full"
+            src={data.avatar.url}
+            alt={data.avatar.title}
+            height="200"
+            width="200"
+          />
+        </div>
         <div
           id="about-page-blurb"
-          className="z-10 max-w-lg flex-col flex gap-4"
+          className="z-10 max-w-2xl flex-col flex gap-4 text-center md:text-left"
         >
           <ReactMarkdown>{data.blurb}</ReactMarkdown>
-          <div className="flex gap-10 text-lg">
+          <div className="flex w-full gap-10 text-lg justify-center md:justify-start">
             <ArrowedLink
               title="linkedin"
               link="https://www.linkedin.com/in/carng/"

@@ -31,7 +31,7 @@ export default async function Home() {
             layout="fill"
           />
         </div>
-        <div className="flex z-10 gap-20 text-xl">
+        <div className="flex z-10 gap-10 sm:gap-16 md:gap-24 lg:gap-32 text-lg md:text-2xl">
           <Link href="/about">about</Link>
           <Link href="/projects">projects</Link>
           <Link href="/contact">contact</Link>

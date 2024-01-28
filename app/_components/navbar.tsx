@@ -5,9 +5,9 @@ const links = ["about", "projects", "contact"];
 
 export default function Navbar({ hide }) {
   return (
-    <div className="fade-in-anin flex w-full max-w-7xl py-6 px-8 justify-between">
+    <div className="fade-in-anin flex w-screen max-w-full py-6 px-8 md:px-12 justify-between">
       <Link className="z-20" href="/">
-        <ArrowBackIosNewRounded />
+        <ArrowBackIosNewRounded sx={{ fontSize: { xs: "18px", md: "24px" } }} />
       </Link>
       <div className="z-20 flex gap-5">
         {links.map((link) => {

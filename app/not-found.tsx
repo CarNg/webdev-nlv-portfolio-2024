@@ -8,7 +8,7 @@ export default function NotFound() {
       <ParticlesBackground />
       <div className="flex min-w-screen min-h-screen justify-center items-center px-5">
         <div className="flex flex-col w-full items-center">
-          <div className="z-10 text-9xl font-extrabold mb-5 italic mt-20">
+          <div className="z-10 text-9xl font-extrabold mb-5 italic mt-20 pr-3">
             404
           </div>
           <TerminalText />
