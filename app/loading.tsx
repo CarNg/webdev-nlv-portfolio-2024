@@ -1,4 +1,10 @@
+import ParticlesBackground from "./_components/particlesBackground";
+
 export default function Loading() {
-  // Or a custom loading skeleton component
-  return <p>Loading...</p>;
+  return (
+    <div className="flex min-w-screen min-h-screen justify-center items-center">
+      <ParticlesBackground />
+      <div className="loader z-20"></div>
+    </div>
+  );
 }

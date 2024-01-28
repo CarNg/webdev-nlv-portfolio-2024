@@ -1,15 +1,15 @@
 import { extractMetadata } from "@/lib/api";
 import {
-  getLangingMetadata,
+  getLandingMetadata,
   getLangingPageData,
 } from "@/lib/api/fetchLandingPage";
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import ParticlesBackground from "./_components/particlesBackground";
-import TerminalText from "./_components/terminalText";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const metadata = await getLangingMetadata();
+  const metadata = await getLandingMetadata();
   return extractMetadata(metadata);
 }
 
@@ -19,10 +19,7 @@ export default async function Home() {
   return (
     <main>
       <ParticlesBackground />
-      <div
-        id="landing-page-content-wrapper"
-        className="flex min-h-screen flex-col items-center justify-center gap-2 md:gap-4 md:pb-9 bg-black"
-      >
+      <div className="fade-scale-in-anin flex min-h-screen flex-col items-center justify-center gap-2 md:pb-9 bg-black">
         <div
           className="relative max-w-4xl z-10 w-4/5"
           style={{ aspectRatio: "80/51" }}
@@ -34,7 +31,12 @@ export default async function Home() {
             layout="fill"
           />
         </div>
-        <TerminalText text={data.subtitle} />
+        <div className="flex z-10 gap-20 text-xl">
+          <Link href="/about">about</Link>
+          <Link href="/projects">projects</Link>
+          <Link href="/contact">contact</Link>
+        </div>
+        {/* <TerminalText text={data.subtitle} /> */}
       </div>
     </main>
   );

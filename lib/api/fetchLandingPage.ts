@@ -19,7 +19,7 @@ function extractPageData(fetchResponse) {
   return fetchResponse?.data?.pageLandingCollection?.items;
 }
 
-export async function getLangingMetadata() {
+export async function getLandingMetadata() {
   const data = await fetchGraphQL(
     `query {
       pageLandingCollection(preview: ${"false"}) {
