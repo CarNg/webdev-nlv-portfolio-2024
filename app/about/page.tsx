@@ -34,7 +34,7 @@ export default async function About() {
           className="z-10 max-w-2xl flex-col flex gap-4 text-center md:text-left"
         >
           <ReactMarkdown>{data.blurb}</ReactMarkdown>
-          <div className="flex w-full gap-10 text-lg justify-center md:justify-start">
+          <div className="flex w-full gap-10 text-lg justify-center md:justify-start mt-4 md:mt-0">
             <ArrowedLink
               title="linkedin"
               link="https://www.linkedin.com/in/carng/"

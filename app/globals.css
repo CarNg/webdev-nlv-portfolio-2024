@@ -43,16 +43,24 @@ a:hover {
   font-style: italic;
 }
 
-a:hover svg {
+a:hover .link-box {
+  border-color: #4ed9d6;
+}
+
+a:hover span {
+  color: #fcfcfc;
+  font-style: normal;
+}
+
+a:hover svg:not(.exception) {
   transform: skewX(-8deg);
 }
 
 .content-wrapper {
   display: flex;
   background-color: #012030;
-  padding-right: 5rem;
-  padding-left: 5rem;
-  height: calc(100vh - 76px);
+  padding: 2.5rem;
+  min-height: calc(100vh - 76px);
 }
 
 /*
