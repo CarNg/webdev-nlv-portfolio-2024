@@ -1,4 +1,4 @@
-import ParticlesBackground from "./_components/particlesBackground";
+import ParticlesBackground from "./_components/ParticlesBackground";
 
 export default function Loading() {
   return (

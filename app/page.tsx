@@ -6,7 +6,7 @@ import {
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import ParticlesBackground from "./_components/particlesBackground";
+import ParticlesBackground from "./_components/ParticlesBackground";
 
 export async function generateMetadata(): Promise<Metadata> {
   const metadata = await getLandingMetadata();

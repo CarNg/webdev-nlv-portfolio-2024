@@ -1,6 +1,6 @@
-import ArrowedLink from "./_components/arrrowedLink";
-import ParticlesBackground from "./_components/particlesBackground";
-import TerminalText from "./_components/terminalText";
+import ArrowedLink from "./_components/ArrrowedLink";
+import ParticlesBackground from "./_components/ParticlesBackground";
+import TerminalText from "./_components/TerminalText";
 
 export default function NotFound() {
   return (

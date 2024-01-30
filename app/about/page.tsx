@@ -3,9 +3,9 @@ import { getAboutMetadata, getAboutPageData } from "@/lib/api/fetchAboutPage";
 import { Metadata } from "next";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
-import ArrowedLink from "../_components/arrrowedLink";
-import Navbar from "../_components/navbar";
-import ParticlesBackground from "../_components/particlesBackground";
+import ArrowedLink from "../_components/ArrrowedLink";
+import Navbar from "../_components/Navbar";
+import ParticlesBackground from "../_components/ParticlesBackground";
 
 export async function generateMetadata(): Promise<Metadata> {
   const metadata = await getAboutMetadata();
