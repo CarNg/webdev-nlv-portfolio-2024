@@ -59,7 +59,7 @@ a:hover svg:not(.exception) {
 .content-wrapper {
   display: flex;
   background-color: #012030;
-  padding: 2.5rem;
+  padding: 1rem 2rem 3rem;
   min-height: calc(100vh - 76px);
 }
 
