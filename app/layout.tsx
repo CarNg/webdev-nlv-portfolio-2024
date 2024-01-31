@@ -7,6 +7,8 @@ import "./globals.css";
 const sometype = Sometype_Mono({
   subsets: ["latin"],
   variable: "--custom-font-sometype",
+  display: "swap",
+  adjustFontFallback: false,
 });
 
 const theme = createTheme({
