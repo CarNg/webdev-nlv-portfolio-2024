@@ -27,7 +27,7 @@ export default function ProjectFilter({ projectTypes, currentType }) {
         projects:
         {projectTypes.map((link, index) => {
           return (
-            <>
+            <div key={link}>
               <Link
                 className={`filter-links ${
                   currentType === link ? "active" : ""
@@ -37,7 +37,7 @@ export default function ProjectFilter({ projectTypes, currentType }) {
                 {link.replace("-", " ")}
               </Link>
               {index < projectTypes.length - 1 ? "/" : ""}
-            </>
+            </div>
           );
         })}
       </div>

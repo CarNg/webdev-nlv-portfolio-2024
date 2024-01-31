@@ -28,7 +28,8 @@ export default async function Home() {
             priority
             src={data.mainImage.url}
             alt={data.mainImage.title}
-            layout="fill"
+            fill
+            sizes="100vw"
           />
         </div>
         <div className="flex z-10 gap-10 sm:gap-16 md:gap-24 lg:gap-32 text-lg md:text-2xl">
