@@ -9,7 +9,7 @@ export default function Navbar({ hide }) {
       <Link className="z-20" href="/">
         <ArrowBackIosNewRounded sx={{ fontSize: { xs: "18px", md: "24px" } }} />
       </Link>
-      <div className="z-20 flex gap-5">
+      <div className="z-20 flex gap-5 text-lg">
         {links.map((link) => {
           return (
             <Link

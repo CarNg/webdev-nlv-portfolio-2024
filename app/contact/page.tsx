@@ -64,9 +64,9 @@ export default async function Contact() {
                 key={c.type}
                 href={c.link}
                 target="_blank"
-                className="w-full md:w-auto"
+                className="w-full md:w-72"
               >
-                <div className="z-10 flex flex-col gap-4 border-white border-solid border-2 rounded-lg p-6 md:p-10 md:min-w-72 md:w-72 md:min-h-72 h-36 md:h-72 justify-center md:items-center break-words link-box bg-black">
+                <div className="z-10 flex flex-col gap-5 md:gap-10 border-white border-solid border-2 rounded-lg p-6 md:p-10 md:min-w-72 md:w-72 md:min-h-72 h-36 md:h-72 justify-center md:items-center break-words link-box bg-black">
                   <div className="flex flex-row md:flex-col items-center gap-4">
                     {getIcon(c.type)}
                     <span className="text-sm exception md:hidden">
