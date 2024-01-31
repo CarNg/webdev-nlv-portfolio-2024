@@ -47,7 +47,7 @@ a:hover .link-box {
   border-color: #4ed9d6;
 }
 
-a:hover span {
+a:hover span.exception {
   color: #fcfcfc;
   font-style: normal;
 }
@@ -59,8 +59,10 @@ a:hover svg:not(.exception) {
 .content-wrapper {
   display: flex;
   background-color: #012030;
-  padding: 1rem 2rem 3rem;
+  padding: 1rem 3rem 3rem;
   min-height: calc(100vh - 76px);
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 /*
@@ -91,6 +93,19 @@ a:hover svg:not(.exception) {
   color: #4ed9d6;
   font-size: 1.3rem;
   font-weight: 900;
+}
+
+/*
+  Projects page custom CSS
+*/
+.filter-links {
+  margin: 0 10px;
+}
+
+.filter-links.active {
+  color: #4ed9d6;
+  font-style: italic;
+  font-weight: bold;
 }
 
 /*
