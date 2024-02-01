@@ -3,50 +3,24 @@ import {
   getContactMetadata,
   getContactPageData,
 } from "@/lib/api/fetchContactPage";
+import EmailIcon from "@mui/icons-material/Email";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../_components/Navbar";
 import ParticlesBackground from "../_components/ParticlesBackground";
-import IconEmail from "../assets/IconEmail";
-import IconGithub from "../assets/IconGithub";
-import IconItchIo from "../assets/IconItchIo";
-import IconLinkedIn from "../assets/IconLinkedIn";
+import ItchIcon from "../assets/IconItch.svg";
 
 export async function generateMetadata(): Promise<Metadata> {
   const metadata = await getContactMetadata();
   return extractMetadata(metadata);
 }
 
-const getIcon = (type: string) => {
-  if (type === "email") {
-    return (
-      <IconEmail
-        className="exception"
-        sx={{ fontSize: { xs: "32px", md: "40px" } }}
-      />
-    );
-  } else if (type === "github") {
-    return (
-      <IconGithub
-        className="exception"
-        sx={{ fontSize: { xs: "32px", md: "40px" } }}
-      />
-    );
-  } else if (type === "itch.io") {
-    return (
-      <IconItchIo
-        className="exception"
-        sx={{ fontSize: { xs: "32px", md: "40px" } }}
-      />
-    );
-  } else {
-    return (
-      <IconLinkedIn
-        className="exception"
-        sx={{ fontSize: { xs: "32px", md: "40px" } }}
-      />
-    );
-  }
+const iconProps = {
+  className: "exception",
+  sx: { fontSize: { xs: "40px", md: "50px" }, color: "#FCFCFC" },
 };
 
 export default async function Contact() {
@@ -68,7 +42,10 @@ export default async function Contact() {
               >
                 <div className="z-10 flex flex-col gap-5 md:gap-10 border-white border-solid border-2 rounded-lg p-6 md:p-10 md:min-w-72 md:w-72 md:min-h-72 h-36 md:h-72 justify-center md:items-center break-words link-box bg-black">
                   <div className="flex flex-row md:flex-col items-center gap-4">
-                    {getIcon(c.type)}
+                    {c.type === "email" && <EmailIcon {...iconProps} />}
+                    {c.type === "github" && <GitHubIcon {...iconProps} />}
+                    {c.type === "linkedin" && <LinkedInIcon {...iconProps} />}
+                    {c.type === "itch.io" && <Image src={ItchIcon} alt="" />}
                     <span className="text-sm exception md:hidden">
                       {c.type}
                     </span>
