@@ -13,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export const dynamicParams = false;
 const projectTypes = ["all", "web-dev", "digital-games", "analog-games"];
 export async function generateStaticParams() {
-  return projectTypes.map((t) => ({ params: { type: t } }));
+  return projectTypes.map((t) => ({ type: t }));
 }
 
 export default function ProjectsLayout({
