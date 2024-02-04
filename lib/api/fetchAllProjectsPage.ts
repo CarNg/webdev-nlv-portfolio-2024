@@ -11,23 +11,19 @@ const PROJECTS_PAGE_FIELDS = `
   projectCardsCollection {
     items {
       type,
-      coverPhotoCollection(limit: 2) {
-        items {
-          url
-        }
+      coverPhoto {
+        title,
+        url
       }
       title,
       year,
       role,
       company,
-      iconsCollection(limit: 3) {
-        items {
-          url,
-          title,
-          description
-        }
-      },
-      url
+      players,
+      playTime,
+      tech,
+      url,
+      projectUrl
     }
   }
 `;

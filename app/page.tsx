@@ -32,7 +32,7 @@ export default async function Home() {
             sizes="100vw"
           />
         </div>
-        <div className="flex z-10 gap-10 sm:gap-16 md:gap-24 lg:gap-32 text-lg md:text-2xl">
+        <div className="flex flex-col sm:flex-row items-center z-10 gap-5 sm:gap-16 md:gap-24 lg:gap-32 text-2xl mt-20 sm:mt-0">
           <Link href="/about">about</Link>
           <Link href="/projects">projects</Link>
           <Link href="/contact">contact</Link>

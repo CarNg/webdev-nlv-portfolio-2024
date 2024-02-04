@@ -22,7 +22,7 @@ export default async function About() {
       <div className="fade-in-anin content-wrapper flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
         <div className="z-10 min-w-[180px] md:min-w-[200px] max-w-[180px] md:max-w-[200px]">
           <Image
-            className="border-dark-teal border-solid border-2 rounded-full"
+            className="border-white border-solid border-2 rounded-full"
             src={data.avatar.url}
             alt={data.avatar.title}
             height="200"

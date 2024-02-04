@@ -12,7 +12,7 @@ export default async function Projects({
   });
 
   return (
-    <div className="fade-in-anin flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-y-8 md:gap-y-6 flex-wrap h-fit mx-auto w-full">
+    <div className="fade-in-anin flex flex-col sm:flex-row items-center justify-center sm:justify-start sm:gap-x-5 gap-y-8 md:gap-y-6 flex-wrap h-fit mx-auto w-full">
       {projects.map((p) => {
         return <ProjectCard key={p.title} project={p} />;
       })}

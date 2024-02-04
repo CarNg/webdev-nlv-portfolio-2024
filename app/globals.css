@@ -59,7 +59,7 @@ a:hover svg:not(.exception) {
 .content-wrapper {
   display: flex;
   background-color: #012030;
-  padding: 1rem 3rem 3rem;
+  padding: 1rem 2rem 3rem;
   min-height: calc(100vh - 76px);
   max-width: 1600px;
   margin: 0 auto;
@@ -106,6 +106,19 @@ a:hover svg:not(.exception) {
   color: #4ed9d6;
   font-style: italic;
   font-weight: bold;
+}
+
+.cover-image {
+  transition: all ease-in-out 0.5s;
+}
+
+.project-card:hover .cover-image {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+.project-card:hover .cover-image-mask {
+  opacity: 0;
 }
 
 /*
