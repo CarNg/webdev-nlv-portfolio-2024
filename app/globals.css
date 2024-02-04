@@ -59,10 +59,14 @@ a:hover svg:not(.exception) {
 .content-wrapper {
   display: flex;
   background-color: #012030;
-  padding: 1rem 2rem 3rem;
+  padding: 1rem 2rem 5rem;
   min-height: calc(100vh - 76px);
   max-width: 1600px;
   margin: 0 auto;
+}
+
+.no-href-link:hover {
+  cursor: default;
 }
 
 /*
@@ -89,10 +93,24 @@ a:hover svg:not(.exception) {
 /*
   About page custom CSS
 */
+#about-page-avatar {
+  transition: all ease-in-out 0.5s;
+}
+
+#about-page-avatar:hover {
+  filter: grayscale(0);
+  transform: scale(1.05);
+}
+
 #about-page-blurb p strong {
   color: #4ed9d6;
   font-size: 1.3rem;
   font-weight: 900;
+}
+
+#about-page-blurb p a {
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 /*

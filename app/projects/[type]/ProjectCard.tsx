@@ -12,7 +12,11 @@ export default function ProjectCard({ project }) {
       target={project.url ? "_blank" : "_self"}
       className="z-10 w-full md:w-[48%] xl:w-[32%] project-card"
     >
-      <div className="z-10 flex flex-col border-white border-2 rounded-lg overflow-hidden link-box h-60 sm:h-80 md:h-72">
+      <div
+        className={`z-10 flex flex-col border-white border-2 rounded-lg overflow-hidden link-box h-60 sm:h-80 md:h-72 ${
+          project.url ? "" : "no-href-link"
+        }`}
+      >
         <div className="relative z-10 h-1/2 sm:h-[70%] md:h-[60%] flex-grow overflow-hidden">
           <Image
             className="cover-image z-10 object-cover object-center sm:grayscale-[50%]"

@@ -20,9 +20,10 @@ export default async function About() {
       <ParticlesBackground />
       <Navbar hide="about" />
       <div className="fade-in-anin content-wrapper flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
-        <div className="z-10 min-w-[180px] md:min-w-[200px] max-w-[180px] md:max-w-[200px]">
+        <div className="z-10 min-w-[180px] md:min-w-[200px] max-w-[180px] md:max-w-[200px] border-dark-teal border-solid border-2 rounded-full overflow-hidden">
           <Image
-            className="border-white border-solid border-2 rounded-full"
+            id="about-page-avatar"
+            className="grayscale-[50%]"
             src={data.avatar.url}
             alt={data.avatar.title}
             height="200"
@@ -31,10 +32,10 @@ export default async function About() {
         </div>
         <div
           id="about-page-blurb"
-          className="z-10 max-w-2xl flex-col flex gap-4 text-center md:text-left"
+          className="z-10 max-w-3xl flex-col flex gap-4 text-center md:text-left md:text-lg"
         >
           <ReactMarkdown>{data.blurb}</ReactMarkdown>
-          <div className="flex w-full gap-10 text-lg justify-center md:justify-start mt-4 md:mt-0">
+          <div className="flex w-full gap-10 text-lg justify-center md:justify-start mt-4">
             <ArrowedLink
               title="linkedin"
               link="https://www.linkedin.com/in/carng/"
