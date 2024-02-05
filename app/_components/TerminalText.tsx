@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-function printText(words) {
+function printText(words: string[]) {
   let visible = true;
   let con = document.getElementById("console-underscore");
   let letterCount = 1;
@@ -18,7 +18,7 @@ function printText(words) {
       waiting = true;
       if (target) target.innerHTML = words[0].substring(0, letterCount);
       window.setTimeout(function () {
-        let usedWord = words.shift();
+        let usedWord = words.shift() || "";
         words.push(usedWord);
         x = 1;
         letterCount += x;
@@ -47,18 +47,21 @@ function printText(words) {
   }, 500);
 }
 
-export default function TerminalText({ text }) {
+export default function TerminalText() {
   useEffect(() => {
     setTimeout(() => {
-      printText([text, "stay tuned"]);
+      printText([
+        "sorry, page not found",
+        "we can't seem to find what you're looking for",
+      ]);
     }, 1300);
   });
 
   return (
     <div className="console-container z-10 h-10 flex justify-center min-w-full">
-      <h1 className="text-sm md:text-3xl text-white" id="text"></h1>
+      <h1 className="md:text-xl text-white" id="text"></h1>
       <div
-        className=" inline-block relative left-1 text-sm md:text-3xl text-white opacity-0"
+        className=" inline-block relative left-1 md:text-xl text-white opacity-0"
         id="console-underscore"
       >
         &#95;
