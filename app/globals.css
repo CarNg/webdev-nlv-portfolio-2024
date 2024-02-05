@@ -17,11 +17,126 @@
   }
 }
 
-/*
-  Landing Page Custom CSS
-*/
-#landing-page-content-wrapper {
+.fade-scale-in-anin {
   animation: fadeScaleIn 1.5s ease-in-out 0ms 1 reverse backwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in-anin {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/*
+  Custom global CSS
+*/
+a:hover {
+  color: #4ed9d6;
+  font-style: italic;
+}
+
+a:hover .link-box {
+  border-color: #4ed9d6;
+}
+
+a:hover span.exception {
+  color: #fcfcfc;
+  font-style: normal;
+}
+
+a:hover svg:not(.exception) {
+  transform: skewX(-8deg);
+}
+
+.content-wrapper {
+  display: flex;
+  background-color: #012030;
+  padding: 1rem 2rem 5rem;
+  min-height: calc(100vh - 76px);
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.no-href-link:hover {
+  cursor: default;
+}
+
+/*
+  Loading page custom CSS
+*/
+#loader {
+  width: fit-content;
+  font-size: 16px;
+  clip-path: inset(0 1ch 0 0);
+  animation: l4 1s steps(4) infinite;
+  font-style: italic;
+}
+
+#loader:before {
+  content: "Loading...";
+}
+
+@keyframes l4 {
+  to {
+    clip-path: inset(0 -1ch 0 0);
+  }
+}
+
+/*
+  About page custom CSS
+*/
+#about-page-avatar {
+  transition: all ease-in-out 0.5s;
+}
+
+#about-page-avatar:hover {
+  filter: grayscale(0);
+  transform: scale(1.05);
+}
+
+#about-page-blurb p strong {
+  color: #4ed9d6;
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+
+#about-page-blurb p a {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/*
+  Projects page custom CSS
+*/
+.filter-links {
+  margin: 0 10px;
+}
+
+.filter-links.active {
+  color: #4ed9d6;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.cover-image {
+  transition: all ease-in-out 0.5s;
+}
+
+.project-card:hover .cover-image {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+.project-card:hover .cover-image-mask {
+  opacity: 0;
 }
 
 /*
@@ -39,6 +154,8 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  font-family: var(--custom-font-sometype);
+  color: #fcfcfc;
 }
 img,
 picture,
