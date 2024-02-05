@@ -19,7 +19,7 @@ export default function ProjectCard({ project }) {
       >
         <div className="relative z-10 h-1/2 sm:h-[70%] md:h-[60%] flex-grow overflow-hidden">
           <Image
-            className="cover-image z-10 object-cover object-center sm:grayscale-[50%]"
+            className="cover-image z-10 object-cover object-center sm:grayscale sm:contrast-125"
             src={project.coverPhoto.url}
             alt=""
             fill

@@ -20,10 +20,10 @@ export default async function About() {
       <ParticlesBackground />
       <Navbar hide="about" />
       <div className="fade-in-anin content-wrapper flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
-        <div className="z-10 min-w-[180px] md:min-w-[200px] max-w-[180px] md:max-w-[200px] border-dark-teal border-solid border-2 rounded-full overflow-hidden">
+        <div className="z-10 min-w-[180px] md:min-w-[200px] max-w-[180px] md:max-w-[200px] border-dark-teal sm:border-white hover:border-dark-teal border-solid border-2 rounded-full overflow-hidden">
           <Image
             id="about-page-avatar"
-            className="sm:grayscale-[50%]"
+            className="sm:grayscale"
             src={data.avatar.url}
             alt={data.avatar.title}
             height="200"
