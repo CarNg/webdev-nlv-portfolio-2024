@@ -13,25 +13,25 @@ export default function ProjectCard({ project }) {
       className="z-10 w-full md:w-[48%] xl:w-[32%] project-card"
     >
       <div
-        className={`z-10 flex flex-col border-white border-2 rounded-lg overflow-hidden link-box h-60 sm:h-80 md:h-72 ${
+        className={`z-10 flex flex-col border-black dark:border-white border-2 rounded-lg overflow-hidden link-box h-60 sm:h-80 md:h-72 ${
           project.url ? "" : "no-href-link"
         }`}
       >
         <div className="relative z-10 h-1/2 sm:h-[70%] md:h-[60%] flex-grow overflow-hidden">
           <Image
-            className="cover-image z-10 object-cover object-center sm:grayscale sm:contrast-125"
+            className="cover-image z-10 object-cover object-center dark:sm:grayscale dark:sm:contrast-125"
             src={project.coverPhoto.url}
-            alt=""
+            alt="Night Light Visuals project cover photo"
             fill
             sizes="50vw"
           />
-          <div className="cover-image-mask absolute left-0 top-0 h-full w-full bg-black opacity-10 z-20"></div>
+          <div className="cover-image-mask absolute left-0 top-0 h-full w-full dark:bg-black opacity-10 z-20"></div>
         </div>
-        <div className="flex flex-col justify-between px-4 pt-3 pb-1.5 md:pb-2 h-1/2 sm:h-[30%] md:h-[40%] bg-black">
+        <div className="flex flex-col justify-between px-4 pt-3 pb-1.5 md:pb-2 h-1/2 sm:h-[30%] md:h-[40%] bg-white dark:bg-black bg-opacity-70 dark:bg-opacity-70">
           <div>
             <div className="block sm:flex flex-row flex-wrap items-center text-lg font-bold leading-tight overflow-hidden text-nowrap overflow-ellipsis">
               {project.title}{" "}
-              <span className="hidden sm:flex italic text-sm font-normal ml-1">
+              <span className="hidden sm:flex italic text-sm font-semibold dark:font-normal ml-1">
                 ({date.getFullYear()})
               </span>
             </div>

@@ -3,10 +3,12 @@
 import { type ISourceOptions } from "@tsparticles/engine";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
+import { useTheme } from "next-themes";
 import { useEffect, useMemo, useState } from "react";
 
 export default function ParticlesBackground() {
   const [init, setInit] = useState(false);
+  const { theme } = useTheme();
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -20,7 +22,7 @@ export default function ParticlesBackground() {
     () => ({
       background: {
         color: {
-          value: "#012030",
+          value: theme === "light" ? "#fcfcfc" : "#012030",
         },
       },
       interactivity: {
@@ -46,10 +48,10 @@ export default function ParticlesBackground() {
       },
       particles: {
         color: {
-          value: "#fcfcfc",
+          value: theme === "light" ? "#012030" : "#fcfcfc",
         },
         links: {
-          color: "#fcfcfc",
+          color: theme === "light" ? "#012030" : "#fcfcfc",
           distance: 100,
           enable: true,
           opacity: 0.4,
@@ -83,7 +85,7 @@ export default function ParticlesBackground() {
       },
       detectRetina: true,
     }),
-    []
+    [theme]
   );
 
   return <>{init && <Particles id="tsparticles" options={options} />}</>;

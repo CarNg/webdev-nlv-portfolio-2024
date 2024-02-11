@@ -2,7 +2,6 @@ import { extractMetadata } from "@/lib/api";
 import { getProjectsMetadata } from "@/lib/api/fetchAllProjectsPage";
 import { Metadata } from "next";
 import Navbar from "../../_components/Navbar";
-import ParticlesBackground from "../../_components/ParticlesBackground";
 import ProjectFilter from "./ProjectFilter";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -25,7 +24,6 @@ export default function ProjectsLayout({
 }) {
   return (
     <main>
-      <ParticlesBackground />
       <Navbar hide="projects" />
       <div className="content-wrapper flex flex-col">
         <ProjectFilter projectTypes={projectTypes} currentType={params.type} />

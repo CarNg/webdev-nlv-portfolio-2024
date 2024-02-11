@@ -39,17 +39,29 @@
   Custom global CSS
 */
 a:hover {
-  color: #4ed9d6;
+  color: #399e9d;
   font-style: italic;
 }
 
+.dark a:hover {
+  color: #4ed9d6;
+}
+
 a:hover .link-box {
-  border-color: #4ed9d6;
+  border-color: #399e9d;
+}
+
+.dark a:hover .link-box {
+  color: #4ed9d6;
 }
 
 a:hover span.exception {
-  color: #fcfcfc;
+  color: #012030;
   font-style: normal;
+}
+
+.dark a:hover span.exception {
+  color: #fcfcfc;
 }
 
 a:hover svg:not(.exception) {
@@ -58,8 +70,7 @@ a:hover svg:not(.exception) {
 
 .content-wrapper {
   display: flex;
-  background-color: #012030;
-  padding: 1rem 2rem 5rem;
+  padding: 1rem 2rem 4rem;
   min-height: calc(100vh - 76px);
   max-width: 1600px;
   margin: 0 auto;
@@ -103,14 +114,22 @@ a:hover svg:not(.exception) {
 }
 
 #about-page-blurb p strong {
-  color: #4ed9d6;
+  color: #399e9d;
   font-size: 1.3rem;
   font-weight: 900;
+}
+
+.dark #about-page-blurb p strong {
+  color: #4ed9d6;
 }
 
 #about-page-blurb p a {
   font-weight: 700;
   text-decoration: underline;
+}
+
+.dark #about-page-blurb p a {
+  font-weight: 900;
 }
 
 /*
@@ -121,9 +140,13 @@ a:hover svg:not(.exception) {
 }
 
 .filter-links.active {
-  color: #4ed9d6;
+  color: #399e9d;
   font-style: italic;
   font-weight: bold;
+}
+
+.dark .filter-links.active {
+  color: #4ed9d6;
 }
 
 .cover-image {
@@ -155,7 +178,6 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: var(--custom-font-sometype);
-  color: #fcfcfc;
 }
 img,
 picture,
