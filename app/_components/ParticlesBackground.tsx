@@ -85,7 +85,7 @@ export default function ParticlesBackground() {
       },
       detectRetina: true,
     }),
-    [theme]
+    [theme, init]
   );
 
   return <>{init && <Particles id="tsparticles" options={options} />}</>;
