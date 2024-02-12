@@ -22,7 +22,7 @@ export default function ParticlesBackground() {
     () => ({
       background: {
         color: {
-          value: theme === "light" ? "#fcfcfc" : "#012030",
+          value: theme !== "dark" ? "#fcfcfc" : "#012030",
         },
       },
       interactivity: {
@@ -48,10 +48,10 @@ export default function ParticlesBackground() {
       },
       particles: {
         color: {
-          value: theme === "light" ? "#012030" : "#fcfcfc",
+          value: theme !== "dark" ? "#012030" : "#fcfcfc",
         },
         links: {
-          color: theme === "light" ? "#012030" : "#fcfcfc",
+          color: theme !== "dark" ? "#012030" : "#fcfcfc",
           distance: 100,
           enable: true,
           opacity: 0.4,
