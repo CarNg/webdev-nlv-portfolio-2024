@@ -7,13 +7,13 @@ import IconLightMode from "../assets/IconLightMode.svg";
 export default function ModeToggle() {
   const { theme, setTheme } = useTheme();
   return (
-    <div className="fixed bottom-3 right-3 md:w-8 w-7 z-20">
+    <div className="fixed bottom-4 right-4 md:w-8 w-7 z-20">
       <div className="relative">
         <input
           type="checkbox"
           name="light-switch"
           className="cursor-pointer absolute light-switch w-full h-full opacity-0"
-          checked={theme === "light"}
+          checked={theme !== "dark"}
           onChange={() => {
             if (theme === "dark") {
               return setTheme("light");
