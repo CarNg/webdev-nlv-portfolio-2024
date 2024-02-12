@@ -8,12 +8,17 @@ import { useEffect, useMemo, useState } from "react";
 
 export default function ParticlesBackground() {
   const [init, setInit] = useState(false);
-  const { theme } = useTheme();
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
     }).then(() => {
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        setTheme("dark");
+      } else {
+        setTheme("light");
+      }
       setInit(true);
     });
   }, []);
