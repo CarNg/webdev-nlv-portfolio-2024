@@ -11,7 +11,7 @@ export default function ProjectFilter({ projectTypes, currentType }) {
         projects:
         <select
           value={currentType}
-          className="bg-transparent border-b-[1px] border-light-grey pb-[2px] ml-2 w-1/2"
+          className="bg-transparent border-b-[1px] border-grey pb-[2px] ml-2 w-1/2"
           onChange={(e) => router.push(`/projects/${e.target.value}`)}
         >
           {projectTypes.map((p) => {

@@ -15,7 +15,11 @@ export default function Navbar({ hide }) {
             <Link
               key={link}
               href={`/${link}`}
-              className={hide === link ? "text-dark-teal italic" : ""}
+              className={
+                hide === link
+                  ? "text-dark-teal dark:text-light-teal italic"
+                  : ""
+              }
             >
               {link}
             </Link>

@@ -12,7 +12,10 @@ const LANDING_PAGE_FIELDS = `
     title
     url
   }
-  subtitle
+  mainImageDark {
+    title
+    url
+  }
 `;
 
 function extractPageData(fetchResponse) {

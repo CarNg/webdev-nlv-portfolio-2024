@@ -1,7 +1,9 @@
 "use client";
 
-import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { ThemeProvider } from "next-themes";
 import { Sometype_Mono } from "next/font/google";
+import ModeToggle from "./_components/ModeToggle";
+import ParticlesBackground from "./_components/ParticlesBackground";
 import "./globals.css";
 
 const sometype = Sometype_Mono({
@@ -11,27 +13,24 @@ const sometype = Sometype_Mono({
   adjustFontFallback: false,
 });
 
-const theme = createTheme({
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 640,
-      md: 768,
-      lg: 1024,
-      xl: 1280,
-    },
-  },
-});
-
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={sometype.className + ` bg-black`}>
-        <ThemeProvider theme={theme}>{children}</ThemeProvider>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={
+          sometype.className +
+          ` bg-white dark:bg-black relative text-black dark:text-white font-bold dark:font-normal`
+        }
+      >
+        <ThemeProvider attribute="class">
+          <ParticlesBackground />
+          {children}
+          <ModeToggle />
+        </ThemeProvider>
       </body>
     </html>
   );
