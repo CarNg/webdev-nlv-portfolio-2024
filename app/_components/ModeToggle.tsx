@@ -7,7 +7,7 @@ import IconLightMode from "../assets/IconLightMode.svg";
 export default function ModeToggle() {
   const { theme, setTheme } = useTheme();
   return (
-    <div className="fixed bottom-4 right-4 md:w-8 w-7 z-20">
+    <div className="fixed bottom-5 md:bottom-4 right-4 md:w-8 w-7 z-20">
       <div className="relative">
         <input
           type="checkbox"

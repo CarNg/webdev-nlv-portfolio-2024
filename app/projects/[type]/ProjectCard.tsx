@@ -10,7 +10,7 @@ export default function ProjectCard({ project }) {
       key={project.title}
       href={project.url || ""}
       target={project.url ? "_blank" : "_self"}
-      className="z-10 w-full md:w-[48%] xl:w-[32%] project-card"
+      className="z-10 w-full md:w-[48%] xl:w-[31%] project-card"
     >
       <div
         className={`z-10 flex flex-col border-black dark:border-white border-2 rounded-lg overflow-hidden link-box h-60 sm:h-80 md:h-72 ${
@@ -31,7 +31,7 @@ export default function ProjectCard({ project }) {
           <div>
             <div className="block sm:flex flex-row flex-wrap items-center text-lg font-bold leading-tight overflow-hidden text-nowrap overflow-ellipsis">
               {project.title}{" "}
-              <span className="hidden sm:flex italic text-sm font-semibold dark:font-normal ml-1">
+              <span className="hidden lg:flex italic text-sm font-semibold dark:font-normal ml-1">
                 ({date.getFullYear()})
               </span>
             </div>
