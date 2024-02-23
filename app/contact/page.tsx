@@ -19,7 +19,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const iconProps = {
-  className: "exception text-black dark:text-white w-9 md:w-12 h-9 md:h-12",
+  className: "exception text-black dark:text-white !w-9 md:!w-12 !h-9 md:!h-12",
 };
 
 export default async function Contact() {
