@@ -70,10 +70,16 @@ a:hover svg:not(.exception) {
 
 .content-wrapper {
   display: flex;
-  padding: 1rem 3rem 4rem;
+  padding: 1rem 2rem 4rem;
   min-height: calc(100vh - 76px);
   max-width: 1600px;
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .content-wrapper {
+    padding: 1rem 3rem 4rem;
+  }
 }
 
 .no-href-link:hover {
