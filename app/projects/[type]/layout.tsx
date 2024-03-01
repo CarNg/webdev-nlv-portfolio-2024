@@ -4,13 +4,33 @@ import { Metadata } from "next";
 import Navbar from "../../_components/Navbar";
 import ProjectFilter from "./ProjectFilter";
 
-export async function generateMetadata(): Promise<Metadata> {
+type Props = {
+  params: { type: string };
+};
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const metadata = await getProjectsMetadata();
-  return extractMetadata(metadata);
+  const extractedMetadata = extractMetadata(metadata);
+
+  let type;
+  switch (params.type) {
+    case "web-dev":
+      type = "Web Development";
+      break;
+    case "tabletop-games":
+      type = "Tabletop Games";
+      break;
+    case "digital-games":
+      type = "Digital Games";
+      break;
+    default:
+      type = "All Projects";
+  }
+  extractedMetadata.title = `Projects | ${type}`;
+  return extractedMetadata;
 }
 
 export const dynamicParams = false;
-const projectTypes = ["all", "web-dev", "digital-games", "analog-games"];
+const projectTypes = ["all", "web-dev", "digital-games", "tabletop-games"];
 export async function generateStaticParams() {
   return projectTypes.map((t) => ({ type: t }));
 }

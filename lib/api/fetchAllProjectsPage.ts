@@ -41,7 +41,7 @@ export async function getProjectsMetadata() {
           }
         }
       }`,
-    "projects-page"
+    "projects-page-metadata"
   );
   return extractPageData(data)[0];
 }

@@ -82,10 +82,6 @@ a:hover svg:not(.exception) {
   }
 }
 
-.no-href-link:hover {
-  cursor: default;
-}
-
 /*
   Loading page custom CSS
 */
@@ -166,6 +162,37 @@ a:hover svg:not(.exception) {
 
 .project-card:hover .cover-image-mask {
   opacity: 0;
+}
+
+/*
+  React Slick custom CSS
+*/
+.slick-dots {
+  bottom: -15px !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #012030 !important;
+  opacity: 1 !important;
+}
+
+.slick-dots li button:before {
+  color: #012030 !important;
+  opacity: 1 !important;
+  width: 25px !important;
+  height: 25px !important;
+}
+
+.dark .slick-prev:before,
+.dark .slick-next:before {
+  color: #fcfcfc !important;
+  opacity: 1 !important;
+}
+
+.dark .slick-dots li button:before {
+  color: #fcfcfc !important;
+  opacity: 1 !important;
 }
 
 /*

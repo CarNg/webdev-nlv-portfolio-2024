@@ -4,11 +4,14 @@ import { type ISourceOptions } from "@tsparticles/engine";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { useTheme } from "next-themes";
+import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 
 export default function ParticlesBackground() {
   const [init, setInit] = useState(false);
   const { theme, setTheme } = useTheme();
+  const pathname = usePathname();
+  const isProjectPage = pathname.startsWith("/project/");
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -33,11 +36,11 @@ export default function ParticlesBackground() {
       interactivity: {
         events: {
           onClick: {
-            enable: true,
+            enable: isProjectPage ? false : true,
             mode: "push",
           },
           onHover: {
-            enable: false,
+            enable: isProjectPage,
             mode: "repulse",
           },
         },
@@ -90,7 +93,7 @@ export default function ParticlesBackground() {
       },
       detectRetina: true,
     }),
-    [theme, init]
+    [theme, init, isProjectPage]
   );
 
   return <>{init && <Particles id="tsparticles" options={options} />}</>;
