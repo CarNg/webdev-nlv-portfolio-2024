@@ -44,6 +44,7 @@ export default function ProjectCard({ project }) {
             </div>
           </div>
           <ProjectBullets
+            onProjectCard
             tech={project.tech}
             players={project.players}
             playTime={project.playTime}

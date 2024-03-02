@@ -15,18 +15,34 @@ export default async function Project({
 
   return (
     <div className="flex flex-col w-full max-w-4xl m-x-auto fade-in-anin z-10 m-auto">
-      <h1 className="h1 text-3xl mb-4">{project.title}</h1>
+      <h1 className="h1 text-4xl mb-8 font-bold">{project.title}</h1>
       <div className="flex flex-col gap-y-12">
         <Swiper images={content.imagesCollection.items} />
-        <div className="items-start self-center border-black dark:border-light-teal border-2 border-solid rounded-xl py-7 px-7 md:px-10 flex flex-col md:flex-row w-fit gap-y-3 md:gap-x-14 bg-white dark:bg-black bg-opacity-70 dark:bg-opacity-70">
-          <div className="flex flex-col gap-y-5">
+        <div className="items-start self-center border-black dark:border-light-teal border-2 border-solid rounded-xl py-7 px-7 md:px-10 flex flex-col w-fit gap-y-3 md:gap-x-14 bg-white dark:bg-black bg-opacity-70 dark:bg-opacity-70">
+          <div className="flex gap-x-8">
             <div>
-              <b>Role</b>
+              <b className="text-lg">Year</b>
+              <br />
+              {projectDate.getFullYear()}
+            </div>
+            <div>
+              <b className="text-lg">Role</b>
               <br />
               {project.role}
             </div>
+          </div>
+          <div className="flex gap-x-8">
+            {project.company && (
+              <div>
+                <b className="text-lg">Company</b>
+                <br />
+                {project.company}
+              </div>
+            )}
             <div>
-              <b>{project.tech ? "Technology" : "Game details"}</b>
+              <b className="text-lg">
+                {project.tech ? "Technology" : "Game details"}
+              </b>
               <br />
               <ProjectBullets
                 tech={project.tech}
@@ -35,28 +51,15 @@ export default async function Project({
               />
             </div>
           </div>
-          <div className="flex flex-col gap-y-5">
-            {project.company && (
-              <div>
-                <b>Company</b>
-                <br />
-                {project.company}
-              </div>
-            )}
-            <div>
-              <b>Year</b>
-              <br />
-              {projectDate.getFullYear()}
-            </div>
-          </div>
         </div>
         <Content content={content} />
         <div className="self-center">
-          {content.links.map((l, i) => {
-            return (
-              <ArrowedLink key={l} title={content.linkTexts[i]} link={l} />
-            );
-          })}
+          {content.links &&
+            content.links.map((l, i) => {
+              return (
+                <ArrowedLink key={l} title={content.linkTexts[i]} link={l} />
+              );
+            })}
         </div>
       </div>
     </div>
