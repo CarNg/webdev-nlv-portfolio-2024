@@ -18,7 +18,11 @@ export default async function Project({
       <h1 className="h1 text-4xl mb-8 font-bold">{project.title}</h1>
       <div className="flex flex-col gap-y-12">
         <Swiper images={content.imagesCollection.items} />
-        <div className="items-start self-center border-black dark:border-light-teal border-2 border-solid rounded-xl py-7 px-7 md:px-10 flex flex-col w-fit gap-y-3 md:gap-x-14 bg-white dark:bg-black bg-opacity-70 dark:bg-opacity-70">
+        <div
+          className={`"items-start self-center border-black dark:border-light-teal border-2 border-solid rounded-xl py-7 px-7 md:px-10 flex w-fit gap-y-3 bg-white dark:bg-black bg-opacity-70 dark:bg-opacity-70 ${
+            project.tech ? "flex-col md:gap-x-14" : "md:gap-x-8 flex-row"
+          }"`}
+        >
           <div className="flex gap-x-8">
             <div>
               <b className="text-lg">Year</b>
@@ -53,8 +57,8 @@ export default async function Project({
           </div>
         </div>
         <Content content={content} />
-        <div className="self-center">
-          {content.links &&
+        <div className="self-center flex flex-row gap-x-11">
+          {content.links !== null &&
             content.links.map((l, i) => {
               return (
                 <ArrowedLink key={l} title={content.linkTexts[i]} link={l} />
