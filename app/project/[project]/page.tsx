@@ -16,10 +16,10 @@ export default async function Project({
   return (
     <div className="flex flex-col w-full max-w-4xl m-x-auto fade-in-anin z-10 m-auto">
       <h1 className="h1 text-4xl mb-8 font-bold">{project.title}</h1>
-      <div className="flex flex-col gap-y-12">
+      <div className="flex flex-col">
         <Swiper images={content.imagesCollection.items} />
         <div
-          className={`"items-start self-center border-black dark:border-light-teal border-2 border-solid rounded-xl py-7 px-7 md:px-10 flex w-fit gap-y-3 bg-white dark:bg-black bg-opacity-70 dark:bg-opacity-70 ${
+          className={`"items-start self-center border-black dark:border-light-teal border-2 border-solid rounded-xl py-7 px-7 md:px-10 flex w-fit gap-y-3 bg-white dark:bg-black bg-opacity-70 dark:bg-opacity-70 mt-14 ${
             project.tech ? "flex-col md:gap-x-14" : "md:gap-x-8 flex-row"
           }"`}
         >
