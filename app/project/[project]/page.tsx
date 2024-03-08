@@ -18,12 +18,8 @@ export default async function Project({
       <h1 className="h1 text-4xl mb-8 font-bold">{project.title}</h1>
       <div className="flex flex-col">
         <Swiper images={content.imagesCollection.items} />
-        <div
-          className={`"items-start self-center border-black dark:border-light-teal border-2 border-solid rounded-xl py-7 px-7 md:px-10 flex w-fit gap-y-3 bg-white dark:bg-black bg-opacity-70 dark:bg-opacity-70 mt-14 ${
-            project.tech ? "flex-col md:gap-x-14" : "md:gap-x-8 flex-row"
-          }"`}
-        >
-          <div className="flex gap-x-8">
+        <div className="items-start self-center border-black dark:border-light-teal border-2 border-solid rounded-xl py-7 px-7 md:px-10 flex w-fit gap-y-3 bg-white dark:bg-black bg-opacity-70 dark:bg-opacity-70 mt-14 min-w-full md:min-w-fit md:gap-x-14 flex-col">
+          <div className="flex flex-col gap-y-3 md:gap-y-0 md:flex-row md:gap-x-8">
             <div>
               <b className="text-lg">Year</b>
               <br />
@@ -35,7 +31,7 @@ export default async function Project({
               {project.role}
             </div>
           </div>
-          <div className="flex gap-x-8">
+          <div className="flex flex-col gap-y-3 md:gap-y-0 md:flex-row md:gap-x-8">
             {project.company && (
               <div>
                 <b className="text-lg">Company</b>
@@ -57,7 +53,7 @@ export default async function Project({
           </div>
         </div>
         <Content content={content} />
-        <div className="self-center flex flex-row gap-x-11">
+        <div className="self-center flex flex-col md:flex-row gap-y-3 md:gap-x-11 mt-5 items-center md:items-start">
           {content.links !== null &&
             content.links.map((l, i) => {
               return (
