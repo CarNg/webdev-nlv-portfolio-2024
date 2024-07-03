@@ -33,7 +33,9 @@ const options = {
         {children}
       </Link>
     ),
-    [BLOCKS.UL_LIST]: (node, children) => <ul>{children}</ul>,
+    [BLOCKS.UL_LIST]: (node, children) => (
+      <ul style={{ paddingLeft: 4, listStyleType: "disc" }}>{children}</ul>
+    ),
     [BLOCKS.OL_LIST]: (node, children) => <ol>{children}</ol>,
     [BLOCKS.LIST_ITEM]: (node, children) => <li>{children}</li>,
   },
