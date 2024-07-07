@@ -1,19 +1,25 @@
 import { ArrowBackIosNewRounded } from "@mui/icons-material";
 import Link from "next/link";
 
-const links = ["about", "projects", "contact"];
+const links = ["about", "projects", "devlogs", "contact"];
 
-export default function Navbar({ hide = "", isProject = false }) {
+export default function Navbar({
+  hide = "",
+  isProject = false,
+  isDevlog = false,
+}) {
+  var link = "/";
+  if (isProject) link = "/projects";
+  if (isDevlog) link = "/devlogs";
+
   return (
     <div className="flex w-screen max-w-full py-6 px-7 md:px-12 justify-between">
-      <Link
-        className="z-20 flex flex-row gap-x-2"
-        href={isProject ? "/projects" : "/"}
-      >
+      <Link className="z-20 flex flex-row gap-x-2" href={link}>
         <ArrowBackIosNewRounded sx={{ fontSize: { xs: "18px", md: "24px" } }} />
         {isProject && <div className="text-lg">projects</div>}
+        {isDevlog && <div className="text-lg">devlogs</div>}
       </Link>
-      {!isProject && (
+      {!isProject && !isDevlog && (
         <div className="z-20 flex gap-5 text-lg">
           {links.map((link) => {
             return (

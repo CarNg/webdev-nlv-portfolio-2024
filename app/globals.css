@@ -155,12 +155,12 @@ a:hover svg:not(.exception) {
   transition: all ease-in-out 0.5s;
 }
 
-.project-card:hover .cover-image {
+.summary-card:hover .cover-image {
   filter: grayscale(0);
   transform: scale(1.1);
 }
 
-.project-card:hover .cover-image-mask {
+.summary-card:hover .cover-image-mask {
   opacity: 0;
 }
 
