@@ -18,7 +18,7 @@ export default async function Devlogs() {
   return (
     <main>
       <Navbar hide="devlogs" />
-      <div className="content-wrapper fade-in-anin flex flex-col sm:flex-row items-center justify-center sm:justify-start md:justify-between xl:justify-start sm:gap-x-8 md:gap-x-0 xl:gap-x-8 gap-y-8 flex-wrap h-fit mx-auto w-full">
+      <div className="content-wrapper fade-in-anin flex flex-col sm:flex-row justify-start md:justify-between xl:justify-start sm:gap-x-8 md:gap-x-0 xl:gap-x-8 gap-y-8 flex-wrap h-fit mx-auto w-full mt-0 md:mt-5 xl:mt-16">
         {devlogs.map((l) => {
           return <DevlogCard key={l.date} log={l} />;
         })}
