@@ -14,13 +14,13 @@ export default function Navbar({
 
   return (
     <div className="flex w-screen max-w-full py-6 px-7 md:px-12 justify-between">
-      <Link className="z-20 flex flex-row gap-x-2" href={link}>
+      <Link className="z-20 flex flex-row gap-x-2 items-center" href={link}>
         <ArrowBackIosNewRounded sx={{ fontSize: { xs: "18px", md: "24px" } }} />
         {isProject && <div className="text-lg">projects</div>}
         {isDevlog && <div className="text-lg">devlogs</div>}
       </Link>
       {!isProject && !isDevlog && (
-        <div className="z-20 flex gap-5 text-lg">
+        <div className="z-20 flex gap-5 text-lg max-sm:hidden">
           {links.map((link) => {
             return (
               <Link
@@ -28,7 +28,7 @@ export default function Navbar({
                 href={`/${link}`}
                 className={
                   hide === link
-                    ? "text-dark-teal dark:text-light-teal italic"
+                    ? "text-dark-teal dark:text-light-teal italic max-sm:hidden"
                     : ""
                 }
               >

@@ -19,13 +19,13 @@ export default async function Devlog({ params }: { params: { log: string } }) {
           <b>Date: </b>
           {formattedDate}
         </div>
-        <div className="text-right mb-10">
+        <div className="text-right mb-6 md:mb-10">
           <b>Project: </b>
           <Link href={`/project/${log.project.projectUrl}`}>
             {log.project.title}
           </Link>
         </div>
-        <Content content={content} isDevlog />
+        <Content content={content} />
         <div className="self-center flex flex-col md:flex-row gap-y-3 md:gap-x-11 mt-5 items-center md:items-start">
           {content.links !== null &&
             content.links.map((l, i) => {

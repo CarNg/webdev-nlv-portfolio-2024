@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import { BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types";
 import Link from "next/link";
 
-export default function Content(props: { content: any; isDevlog?: boolean }) {
+export default function Content(props: { content: any }) {
   const options = {
     renderMark: {
       [MARKS.BOLD]: (children) => <b>{children}</b>,
@@ -14,11 +14,7 @@ export default function Content(props: { content: any; isDevlog?: boolean }) {
     },
     renderNode: {
       [BLOCKS.HEADING_2]: (node, children) => (
-        <p
-          className={`font-bold h2 text-2xl leading-9 mt-10 mb-4 ${
-            props.isDevlog ? "mx-10" : ""
-          }`}
-        >
+        <p className="font-bold h2 text-2xl leading-9 mt-10 mb-4 md:mx-5 lg:mx-10">
           {children}
         </p>
       ),
@@ -47,9 +43,8 @@ export default function Content(props: { content: any; isDevlog?: boolean }) {
       ),
       [BLOCKS.UL_LIST]: (node, children) => (
         <ul
+          className="pl-8 md:pl-14 lg:pl-20 pr-3 md:pr-5 lg:pr-10"
           style={{
-            paddingLeft: props.isDevlog ? "80px" : "30px",
-            paddingRight: props.isDevlog ? "40px" : "0px",
             listStyleType: "disc",
           }}
         >
@@ -59,7 +54,7 @@ export default function Content(props: { content: any; isDevlog?: boolean }) {
       [BLOCKS.OL_LIST]: (node, children) => <ol>{children}</ol>,
       [BLOCKS.LIST_ITEM]: (node, children) => <li>{children}</li>,
       [BLOCKS.HR]: (node, children) => (
-        <hr className={`mt-10 mb-10 ${props.isDevlog ? "mx-10" : ""}`} />
+        <hr className="mt-10 mb-10 md:mx-5 lg:mx-10" />
       ),
     },
   };
