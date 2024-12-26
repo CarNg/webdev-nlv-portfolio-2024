@@ -15,7 +15,7 @@ const nextConfig = {
     return [
       {
         source: "/abst",
-        destination: "/anything-but-small-talk",
+        destination: "/project/anything-but-small-talk",
         permanent: true,
       },
       {
