@@ -38,7 +38,7 @@ export default async function About() {
               title="linkedin"
               link="https://www.linkedin.com/in/carng/"
             />
-            <ArrowedLink title="resume" link="/CarmenNgResume.pdf" />
+            <ArrowedLink title="resume" link="/NLV_Resume.pdf" />
           </div>
         </div>
       </div>
