@@ -12,7 +12,7 @@ export default function DevlogCard({ log }) {
     <Link
       key={log.title}
       href={`/devlog/${log.logUrl}`}
-      className="z-10 w-full md:w-[48%] xl:w-[31%] summary-card"
+      className="z-10 w-full md:w-[48%] xl:w-[31%] h-fit summary-card"
     >
       <div className="z-10 flex flex-col border-black dark:border-white border-2 rounded-lg overflow-hidden link-box h-60 sm:h-80 md:h-72">
         <div className="relative z-10 h-1/2 sm:h-[70%] md:h-[60%] flex-grow overflow-hidden">
