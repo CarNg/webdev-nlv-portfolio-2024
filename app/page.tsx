@@ -4,7 +4,7 @@ import {
   getLangingPageData,
 } from "@/lib/api/fetchLandingPage";
 import type { Metadata } from "next";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 
 export async function generateMetadata(): Promise<Metadata> {

@@ -1,7 +1,7 @@
 import { extractMetadata } from "@/lib/api";
 import { getAboutMetadata, getAboutPageData } from "@/lib/api/fetchAboutPage";
 import { Metadata } from "next";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import ArrowedLink from "../_components/ArrrowedLink";
 import Navbar from "../_components/Navbar";

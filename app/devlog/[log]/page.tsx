@@ -2,7 +2,7 @@ import ArrowedLink from "@/app/_components/ArrrowedLink";
 import Content from "@/app/_components/Content";
 import Swiper from "@/app/_components/Swiper";
 import { getDevlogPageData } from "@/lib/api/fetchDevlogPage ";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 
 export default async function Devlog({ params }: { params: { log: string } }) {

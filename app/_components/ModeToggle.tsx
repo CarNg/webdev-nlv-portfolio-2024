@@ -1,6 +1,6 @@
 "use client";
 import { useTheme } from "next-themes";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import IconDarkMode from "../assets/IconDarkMode.svg";
 import IconLightMode from "../assets/IconLightMode.svg";
 
